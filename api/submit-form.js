@@ -1,3 +1,24 @@
+// Handler function for the serverless function
+module.exports = async (req, res) => {
+  // Function configuration with increased timeout
+  module.exports.config = {
+    api: {
+      bodyParser: false,
+      externalResolver: true,
+      // Increase the timeout to 10 seconds (10000 milliseconds)
+      timeout: 10000,
+    },
+  };
+
+  // Check if the request method is POST
+  if (req.method === 'POST') {
+    // Rest of your code...
+  } else {
+    // Handle other HTTP methods if necessary
+    res.status(405).json({ message: 'Method Not Allowed' });
+  }
+};
+
 const { MongoClient } = require('mongodb');
 
 // Connection URL
