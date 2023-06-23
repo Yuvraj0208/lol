@@ -1,3 +1,11 @@
+const { MongoClient } = require('mongodb');
+
+// Connection URL
+const uri = 'mongodb+srv://syuvraj61:Syuvraj61@vrproaccountancy.omfhu2f.mongodb.net/?retryWrites=true&w=majority';
+
+// Database Name
+const dbName = 'vrproaccountancy';
+
 // Handler function for the serverless function
 module.exports = async (req, res) => {
   // Function configuration with increased timeout
@@ -10,26 +18,6 @@ module.exports = async (req, res) => {
     },
   };
 
-  // Check if the request method is POST
-  if (req.method === 'POST') {
-    // Rest of your code...
-  } else {
-    // Handle other HTTP methods if necessary
-    res.status(405).json({ message: 'Method Not Allowed' });
-  }
-};
-
-
-const { MongoClient } = require('mongodb');
-
-// Connection URL
-const uri = 'mongodb+srv://syuvraj61:Syuvraj61@vrproaccountancy.omfhu2f.mongodb.net/?retryWrites=true&w=majority';
-
-// Database Name
-const dbName = 'vrproaccountancy';
-
-// Handler function for the serverless function
-module.exports = async (req, res) => {
   // Check if the request method is POST
   if (req.method === 'POST') {
     const formData = req.body;
