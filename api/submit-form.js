@@ -1,33 +1,22 @@
 const { MongoClient } = require('mongodb');
 
 // Connection URL
-const uri = 'mongodb+srv://syuvraj61:Syuvraj61@vrproaccountancy.omfhu2f.mongodb.net/?retryWrites=true&w=majority';
+const url = 'mongodb+srv://syuvraj61:Syuvraj61@vrproaccountancy.omfhu2f.mongodb.net/?retryWrites=true&w=majority';
+
 
 // Database Name
 const dbName = 'vrproaccountancy';
 
 // Handler function for the serverless function
 module.exports = async (req, res) => {
-  // Function configuration with increased timeout
-  module.exports.config = {
-    api: {
-      bodyParser: false,
-      externalResolver: true,
-      // Increase the timeout to 10 seconds (10000 milliseconds)
-      timeout: 10000,
-    },
-  };
-
   // Check if the request method is POST
   if (req.method === 'POST') {
     const formData = req.body;
 
     // Connect to MongoDB
-    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+    const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
     try {
-      // Connect the client to the server
-      await client.connect();
       console.log('Connected to MongoDB');
 
       // Specify the database
@@ -46,7 +35,7 @@ module.exports = async (req, res) => {
       res.status(500).json({ message: 'Internal server error' });
     } finally {
       // Close the MongoDB connection
-      await client.close();
+      client.close();
     }
   } else {
     // Handle other HTTP methods if necessary
