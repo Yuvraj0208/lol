@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
       bodyParser: false,
       externalResolver: true,
       // Increase the timeout to 10 seconds (10000 milliseconds)
-      timeout: 10000,
+      timeout: 100000,
     },
   };
 
