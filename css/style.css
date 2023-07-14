@@ -8567,7 +8567,7 @@ h1, h2, h3, h4, h5,
   background: #8fd0d2 !important; }
 
 .bg-primary {
-  background: #1ba12d !important; }
+  background: #8fd0d2 !important; }
 
 .btn {
   padding: 12px 16px;
@@ -8788,7 +8788,7 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-  padding: 7em 0;
+  padding: 4em 0;
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
@@ -9357,12 +9357,12 @@ textarea.form-control {
   background: #fff; }
 
 .info-wrap {
-  color: rgba(255, 255, 255, 0.8); }
+  color: rgba(0, 0, 0, 0.8); }
   .info-wrap h3 {
-    color: #fff; }
+    color: #000000; }
   .info-wrap .dbox {
     width: 100%;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     margin-bottom: 25px; }
     .info-wrap .dbox:last-child {
       margin-bottom: 0; }
@@ -9370,9 +9370,9 @@ textarea.form-control {
       margin-bottom: 0; }
       .info-wrap .dbox p span {
         font-weight: 500;
-        color: #fff; }
+        color: #000000; }
       .info-wrap .dbox p a {
-        color: #fff; }
+        color: #000000; }
     .info-wrap .dbox .icon {
       width: 50px;
       height: 50px;
@@ -9428,7 +9428,7 @@ textarea.form-control {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #fff;
+  color: #000000;
   letter-spacing: .1em; }
   .post-info > div {
     display: inline-block; }
