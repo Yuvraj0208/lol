@@ -9683,3 +9683,15 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    .logo {
+      display: inline-block;
+      height: 80px; /* Adjust the height of the logo as needed */
+      margin-right: 10px; /* Adjust the margin as needed */
+    }
+    
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+    
