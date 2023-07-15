@@ -57,4 +57,14 @@ module.exports = async (req, res) => {
     // Handle other HTTP methods if necessary
     res.status(405).json({ message: 'Method Not Allowed' });
   }
+  
+  module.exports.config = {
+    api: {
+      bodyParser: false,
+      externalResolver: true,
+      // Increase the timeout to 10 seconds (10000 milliseconds)
+      timeout: 10000,
+    },
+  };
 };
+
